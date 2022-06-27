@@ -1,0 +1,48 @@
+<button mat-button [matMenuTriggerFor]="tutorials">tutorials</button>
+<mat-menu #tutorials="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="component">component</button>
+  <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
+</mat-menu>
+
+<mat-menu #component="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="interaction" [routerLink]="['/interaction']">interaction</button>
+  <button mat-menu-item [routerLink]="['/projection']">Content Projection</button>
+  <button mat-menu-item [routerLink]="['/dynamic']">Dynamic loader</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<!-- <mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu> -->
+
+<mat-menu #interaction="matMenu">
+  <button mat-menu-item [routerLink]="['/interaction/pass-data']">Pass Data</button>
+  <button mat-menu-item [routerLink]="['/interaction/setter']">intercept-with-setter</button>
+  <button mat-menu-item [routerLink]="['/interaction/ngonchanges']">intercept-with-ngonchanges</button>
+  <button mat-menu-item [routerLink]="['/interaction/vote']">parent-listen-for-child-event</button>
+  <button mat-menu-item [routerLink]="['/interaction/countdown']">using local vars</button>
+  <button mat-menu-item [routerLink]="['/interaction/mission']">communicaiton using a service</button>
+</mat-menu>
+
+<mat-menu #projection="matMenu">
+  <button mat-menu-item [routerLink]="['/projection/single']">Single-slot content projection</button>
+  <button mat-menu-item [routerLink]="['/projection/multi']">Multi-slot content projection</button>
+<!-- 
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button> -->
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>

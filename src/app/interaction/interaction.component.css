@@ -1,0 +1,17 @@
+:host {
+  font-style: oblique;
+}
+:host-context {
+  font-style: underline;
+}
+:host ::ng-deep h3 {
+  font-style: normal;
+}
+:host(.active) {
+  font-weight: bold;
+}
+:host ::ng-deep button{ 
+  border-radius: 20px;
+  background-color: rgb(13, 9, 223);
+  color: aquamarine;
+}
