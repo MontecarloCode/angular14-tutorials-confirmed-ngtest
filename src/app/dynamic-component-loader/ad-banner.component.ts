@@ -12,9 +12,9 @@ import { AdDirective } from './ad.directive';
     </div>
   `,
   styles: [`
-    .ad-banner-example {
+    /* .ad-banner-example {
       width: 400px;
-    }
+    } */
   `]
 })
 

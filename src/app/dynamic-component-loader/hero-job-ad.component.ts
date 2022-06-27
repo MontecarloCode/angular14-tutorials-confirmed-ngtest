@@ -10,7 +10,7 @@ import { AdComponent } from './interfaces';
     </div>
   `,
   styles: [`
-    .job-ad {
+    /* .job-ad {
       border: 1px solid gray;
       padding: 5px;
       padding-bottom: 20px;
@@ -18,7 +18,7 @@ import { AdComponent } from './interfaces';
       border-radius: 10px;
       background-color: lightblue;
       color: black;
-    }
+    } */
   `]
 })
 export class HeroJobAdComponent implements AdComponent {

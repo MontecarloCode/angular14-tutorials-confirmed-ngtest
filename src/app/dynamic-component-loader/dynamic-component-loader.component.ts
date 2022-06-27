@@ -8,7 +8,8 @@ import { AdItem } from './interfaces';
     <div>
       <app-ad-banner [ads]="ads"></app-ad-banner>
     </div>
-  `
+  `,
+  styleUrls: ['./dynamic-component-loader.component.css']
 })
 export class DynamicComponentLoaderComponent implements OnInit {
   ads: AdItem[] = [];
