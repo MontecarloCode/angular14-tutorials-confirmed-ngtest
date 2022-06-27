@@ -1,7 +1,7 @@
 <div class="detail">
   <p [appHighlight]="'orange'">This is the ItemDetailComponent : {{ birthday | date}}</p>
-  <img src="{{itemImageUrl}}" alt="{{item.name}}" [style.display]="displayNone">
-  <span [style.text-decoration]="lineThrough" appHighlight [highlightColor]="'red'">{{ item.name }}
+  <img src="{{itemImageUrl}}" alt="{{item?.name}}" [style.display]="displayNone">
+  <span [style.text-decoration]="lineThrough" appHighlight [highlightColor]="'red'">{{ item?.name }}
   </span>
   <button type="button" (click)="delete()" appHighlight>Delete</button>
 </div>

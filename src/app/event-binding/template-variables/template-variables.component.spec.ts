@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { TemplateVariablesComponent } from './template-variables.component';
 
 describe('TemplateVariablesComponent', () => {
@@ -8,6 +8,7 @@ describe('TemplateVariablesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ TemplateVariablesComponent ]
     })
     .compileComponents();

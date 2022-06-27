@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-// import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EventBindingComponent } from './event-binding.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'eventbinding', component: EventBindingComponent},
   { path: 'twowaybinding', component: TwoWayBindingComponent},
   { path: 'temp-vars', component: TemplateVariablesComponent}
-
 ]
 
 @NgModule({
@@ -30,9 +29,10 @@ const routes: Routes = [
     TemplateVariablesComponent
   ],
   imports: [
-    // CommonModule,
+    CommonModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
