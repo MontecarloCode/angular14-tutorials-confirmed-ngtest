@@ -1,26 +1,25 @@
-<button mat-button [matMenuTriggerFor]="tutorials">tutorials</button>
+<button mat-button [matMenuTriggerFor]="tutorials">Understanding</button>
 <mat-menu #tutorials="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="component">component</button>
-  <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
+  <button mat-menu-item [matMenuTriggerFor]="component" [routerLink]="['/component']">component</button>
+  <button mat-menu-item [matMenuTriggerFor]="template" [routerLink]="['/template']">template</button>
 </mat-menu>
 
 <mat-menu #component="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="interaction" [routerLink]="['/interaction']">interaction</button>
   <button mat-menu-item [routerLink]="['/projection']">Content Projection</button>
   <button mat-menu-item [routerLink]="['/dynamic']">Dynamic loader</button>
-  <button mat-menu-item [routerLink]="['/eventbinding']">Event Binding</button>
-  <button mat-menu-item>Mammals</button>
 </mat-menu>
 
-<!-- <mat-menu #invertebrates="matMenu">
-  <button mat-menu-item>Insects</button>
-  <button mat-menu-item>Molluscs</button>
+<mat-menu #template="matMenu">
+  <button mat-menu-item [routerLink]="['/eventbinding']">Event Binding</button>
+  <button mat-menu-item [routerLink]="['/twowaybinding']">Two-way Binding</button>
+  <!-- <button mat-menu-item>Molluscs</button>
   <button mat-menu-item>Crustaceans</button>
   <button mat-menu-item>Corals</button>
   <button mat-menu-item>Arachnids</button>
   <button mat-menu-item>Velvet worms</button>
-  <button mat-menu-item>Horseshoe crabs</button>
-</mat-menu> -->
+  <button mat-menu-item>Horseshoe crabs</button> -->
+</mat-menu>
 
 <mat-menu #interaction="matMenu">
   <button mat-menu-item [routerLink]="['/interaction/pass-data']">Pass Data</button>

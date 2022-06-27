@@ -18,6 +18,8 @@ export class ItemDetailComponent {
   // This component makes a request but it can't actually delete a hero.
   @Output() deleteRequest = new EventEmitter<Item>();
 
+  birthday = Date.now();
+  
   delete() {
     this.deleteRequest.emit(this.item);
     this.displayNone = this.displayNone ? '' : 'none';

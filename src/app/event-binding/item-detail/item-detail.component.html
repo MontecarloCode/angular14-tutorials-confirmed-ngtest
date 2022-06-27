@@ -1,5 +1,5 @@
 <div class="detail">
-  <p>This is the ItemDetailComponent</p>
+  <p [appHighlight]="'orange'">This is the ItemDetailComponent : {{ birthday | date}}</p>
   <img src="{{itemImageUrl}}" alt="{{item.name}}" [style.display]="displayNone">
   <span [style.text-decoration]="lineThrough" appHighlight [highlightColor]="'red'">{{ item.name }}
   </span>
