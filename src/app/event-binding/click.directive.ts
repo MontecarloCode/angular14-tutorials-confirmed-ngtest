@@ -15,3 +15,19 @@ export class ClickDirective {
   }
 }
 
+@Directive({
+  selector: '[myClick2]',
+  outputs: ['clicks:myClick']  // propertyName:alias
+})
+export class ClickDirective2 {
+  clicks = new EventEmitter<string>();
+  toggle = false;
+
+  constructor(el: ElementRef) {
+    el.nativeElement
+      .addEventListener('click', (event: Event) => {
+        this.toggle = !this.toggle;
+        this.clicks.emit(this.toggle ? 'Click2!' : '');
+      });
+  }
+}

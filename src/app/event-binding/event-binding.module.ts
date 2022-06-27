@@ -2,20 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { EventBindingComponent } from './event-binding.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
-import { ClickDirective } from './click.directive';
+import { ClickDirective, ClickDirective2 } from './click.directive';
 import { HighlightDirective } from './highlight.directive';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { SizerComponent } from './two-way-binding/sizer/sizer.component';
 import { TemplateVariablesComponent } from './template-variables/template-variables.component';
+import { SvgAsTemplateComponent } from './svg-as-template/svg-as-template.component';
+import { BigHeroDetailComponent, HeroDetailComponent } from './svg-as-template/hero-detail.component';
+import { HeroFormComponent } from './svg-as-template/hero-form.component';
+import { heroSwitchComponents } from './svg-as-template/hero-switch.component';
+import { SvgComponent } from './svg-as-template/svg.component';
 
 const routes: Routes = [
-  { path: 'eventbinding', component: EventBindingComponent},
-  { path: 'twowaybinding', component: TwoWayBindingComponent},
-  { path: 'temp-vars', component: TemplateVariablesComponent}
+  { path: 'eventbinding', component: EventBindingComponent },
+  { path: 'twowaybinding', component: TwoWayBindingComponent },
+  { path: 'temp-vars', component: TemplateVariablesComponent },
+  { path: 'svg-as-template', component: SvgAsTemplateComponent },
 ]
 
 @NgModule({
@@ -23,16 +29,22 @@ const routes: Routes = [
     EventBindingComponent,
     ItemDetailComponent,
     ClickDirective,
+    ClickDirective2,
     HighlightDirective,
     TwoWayBindingComponent,
     SizerComponent,
-    TemplateVariablesComponent
+    TemplateVariablesComponent,
+    SvgAsTemplateComponent,
+    SvgComponent,
+    HeroDetailComponent,
+    HeroFormComponent,
+    BigHeroDetailComponent,
+    heroSwitchComponents,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],

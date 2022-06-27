@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { InteractionModule } from './interaction/interaction.module';
 import { ContentProjectionModule } from './content-projection/content-projection.module';
@@ -21,8 +21,6 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    FormsModule,
-    ReactiveFormsModule,
     AppRoutingModule,
     InteractionModule,
     ContentProjectionModule,
